@@ -7,7 +7,7 @@
   - Refactor the file the way you'd like, keeping the tests green
 - After you're done, create a PR named _"Challenge Solution"_ in your own repo and send us a link to the PR so we can review its diff
 
-## Rules
+# Rules
 
 - You can use any data munging library that you like, like lodash, ramda, etc;
 - Think twice before adding external dependencies. Don't use a library that does URL parsing like you're intented to do;
