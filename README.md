@@ -1,7 +1,9 @@
 # Javascript Coding Challenge
 
 The idea of this challenge is to refactor existing code.
+
 There is a failing test to be fixed, but keep in mind that the most important aspect is **rewriting** code.
+
 Avoid doing only changes that would be suggested by simple linters, we would like to see how can you express the same logic in your own code.
 
 ## Challenge Instructions
