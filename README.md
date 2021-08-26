@@ -1,13 +1,19 @@
-# Challenge Instructions
+# Javascript Coding Challenge
+
+The idea of this challenge is to refactor existing code.
+There is a failing test to be fixed, but keep in mind that the most important aspect is **rewriting** code.
+Avoid doing only changes that would be suggested by simple linters, we would like to see how can you express the same logic in your own code.
+
+## Challenge Instructions
 
 - Fork this repo to your own github account
 - After setting up the project, keep your browser with [http://localhost:3000](http://localhost:3000) open as well as Jest tests running on the background
 - Start opening the [buildFullUrl](lib/buildFullUrl.ts) file and:
   - Fix the failing test and commit the quick fix
   - Refactor the file the way you'd like, keeping the tests green
-- After you're done, create a PR named _"Challenge Solution"_ in your own repo and send us a link to the PR so we can review its diff
+- After you're done send us a link to your repository. **DO NOT** send a PR.
 
-# Rules
+## Rules
 
 - You can use any data munging library that you like, like lodash, ramda, etc;
 - Think twice before adding external dependencies. Don't use a library that does URL parsing like you're intented to do;
