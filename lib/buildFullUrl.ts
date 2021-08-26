@@ -19,9 +19,20 @@ export default function buildFullUrl(opts: Options) {
   if (opts.customPath) {
     endpoint = opts.customPath
   }
+  if (opts.id && opts.customPath) {
+    const pathArray = endpoint.split('/')
+    const pathWithId = pathArray.map(item => {
+    if(item === ':id') {
+    return opts.id
+    } else {
+    return item
+    }
+    }).join('/')
+    endpoint = pathWithId
+  }
   endpoint = endpoint.split('//').join('/')
   if (endpoint.indexOf('/') == 0) {
-    let arrayEndpoint = endpoint.split('')
+    const arrayEndpoint = endpoint.split('')
     arrayEndpoint.shift()
     endpoint = arrayEndpoint.join('')
   }
@@ -33,15 +44,15 @@ export default function buildFullUrl(opts: Options) {
     qs = ''
     let options = Object.keys(opts.query)
     for (let i = 0; i < options.length; i++) {
-      let value = opts.query[options[i]]
-      if (value == null || Number.isNaN(value) || typeof value == undefined) {
+      const value = opts.query[options[i]]
+      if (value === null || Number.isNaN(value) || typeof value === 'undefined') {
         delete opts.query[options[i]]
       }
     }
     options = Object.keys(opts.query)
     for (let i = 0; i < options.length; i++) {
       let value = opts.query[options[i]]
-      let name = opts.queryStringParser
+      const name = opts.queryStringParser
         ? opts.queryStringParser(options[i])
         : options[i]
       if (
@@ -62,7 +73,7 @@ export default function buildFullUrl(opts: Options) {
     }
   }
   if (url.lastIndexOf('/') == url.length - 1) {
-    let arrayUrl = url.split('')
+    const arrayUrl = url.split('')
     arrayUrl.pop()
     url = arrayUrl.join('')
   }
